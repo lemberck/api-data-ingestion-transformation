@@ -1,5 +1,5 @@
 """
-TASK : Stadium Goods case test
+TASK : API data pull and transformation for BI report
 AUTHOR: Bruna Lemberck
 VERSION : 1.0
 DESCRIPTION:
