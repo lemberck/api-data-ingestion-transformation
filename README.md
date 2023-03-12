@@ -31,7 +31,7 @@ There are 5 files for this solution:
       -  product_name : object, indicates the name of the product categorized as SHOE type.
       -  price_US : int64, the price of the product in USD.
       -  price_EUR : float64, the price of the product in USD. (price_US/exr_eur). 
-      -  date_exr : object, the date of the exchange rate of a currency agains EUR.
+      -  date_exr : object, the date of the exchange rate of a currency against EUR.
 
 ## References
 - [requests documentation](https://pypi.org/project/requests/)
