@@ -22,7 +22,7 @@ There are 5 files for this solution:
 - **main.py** : Refactored code, to be used in production, with logging information.
 - **output/logs.log** : Logging file,  that allows developers to keep track of the behavior of the code and identify errors or potential issues, with timestamp of each step. In the end, a sample of each of the two results is shown.
 - **output/result1.csv** : Stores the result of the data fetch from EBC API exchange rate for 'February 9-10, 2023', pulling data for all daily currencies against the Euro.
-- **output/result2.csv** :  Stores the final result, that includes all of the products of shoes category from Fake Ecommerce API, their price in USD, and the newly calculated price in EUR for each exchange rate date pulled from the EBC API.
+- **output/result2.csv** :  Stores the final result, that includes all of the products of shoes category from Fake Ecommerce API, their price in USD, the newly calculated price in EUR for each exchange rate date pulled from the EBC API and the date of the exchange rate.
 
 ## References
 - [requests documentation](https://pypi.org/project/requests/)
