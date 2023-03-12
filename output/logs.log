@@ -1,0 +1,391 @@
+2023-03-11 14:01:27 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:01:28 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/data/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 200 None
+2023-03-11 14:01:28 INFO     Successfully retrieved data from https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A
+2023-03-11 14:01:28 INFO     data fetched from ECB API: Index(['KEY', 'FREQ', 'CURRENCY', 'CURRENCY_DENOM', 'EXR_TYPE', 'EXR_SUFFIX',
+       'TIME_PERIOD', 'OBS_VALUE', 'OBS_STATUS', 'OBS_CONF', 'OBS_PRE_BREAK',
+       'OBS_COM', 'TIME_FORMAT', 'BREAKS', 'COLLECTION', 'COMPILING_ORG',
+       'DISS_ORG', 'DOM_SER_IDS', 'PUBL_ECB', 'PUBL_MU', 'PUBL_PUBLIC',
+       'UNIT_INDEX_BASE', 'COMPILATION', 'COVERAGE', 'DECIMALS', 'NAT_TITLE',
+       'SOURCE_AGENCY', 'SOURCE_PUB', 'TITLE', 'TITLE_COMPL', 'UNIT',
+       'UNIT_MULT'],
+      dtype='object')
+2023-03-11 14:01:28 INFO     EBC data after processing: Index(['time_period', 'currency', 'exr_eur'], dtype='object')
+2023-03-11 14:01:28 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:01:29 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/products HTTP/1.1" 200 14864
+2023-03-11 14:01:29 INFO     Successfully retrieved data from https://api.escuelajs.co/api/v1/categories/4/products
+2023-03-11 14:01:29 INFO     data fetched from Fake Ecommerce API: Index(['id', 'title', 'price', 'description', 'images', 'creationAt',
+       'updatedAt', 'category'],
+      dtype='object')
+2023-03-11 14:01:29 INFO     Fake ecommerce data after processing: Index(['title', 'price', 'currency'], dtype='object')
+2023-03-11 14:01:29 INFO     Joined data : Index(['title', 'price', 'currency', 'time_period', 'exr_eur'], dtype='object')
+2023-03-11 14:01:29 INFO     Joined data after processing: Index(['product_name', 'price_US', 'price_EUR', 'date_exr'], dtype='object')
+2023-03-11 14:01:29 INFO     Joined data shape after processing: (48, 4)
+2023-03-11 14:01:29 INFO     
+EBC Exchange Rate data fetch sample: 
+  time_period currency  exr_eur
+0  2023-02-09      AUD   1.5409
+1  2023-02-10      AUD   1.5432
+2  2023-02-09      BGN   1.9558
+3  2023-02-10      BGN   1.9558
+4  2023-02-09      BRL   5.6165
+5  2023-02-10      BRL   5.6245
+2023-03-11 14:01:29 INFO     
+Final result data sample: 
+           product_name  price_US  price_EUR    date_exr
+0  Bespoke Bronze Shirt       808     750.16  2023-02-09
+1  Bespoke Bronze Shirt       808     755.85  2023-02-10
+2      asadsasdadasdasd       100      92.84  2023-02-09
+3      asadsasdadasdasd       100      93.55  2023-02-10
+4   Bespoke Steel Chair       256     237.68  2023-02-09
+5   Bespoke Steel Chair       256     239.48  2023-02-10
+2023-03-11 14:01:29 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:01:40 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:01:41 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/sssdata/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 404 None
+2023-03-11 14:01:41 ERROR    Request to https://sdw-wsrest.ecb.europa.eu/service/sssdata/EXR/D..EUR.SP00.A failed with status code 404
+2023-03-11 14:01:41 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:01:41 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:01:41 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/products HTTP/1.1" 200 14864
+2023-03-11 14:01:42 INFO     Successfully retrieved data from https://api.escuelajs.co/api/v1/categories/4/products
+2023-03-11 14:01:42 INFO     data fetched from Fake Ecommerce API: Index(['id', 'title', 'price', 'description', 'images', 'creationAt',
+       'updatedAt', 'category'],
+      dtype='object')
+2023-03-11 14:01:42 INFO     Fake ecommerce data after processing: Index(['title', 'price', 'currency'], dtype='object')
+2023-03-11 14:01:42 ERROR    An error occurred during data merge: 'currency'
+2023-03-11 14:01:42 INFO     
+EBC Exchange Rate data fetch sample: 
+Empty DataFrame
+Columns: []
+Index: []
+2023-03-11 14:01:42 INFO     
+Final result data sample: 
+Empty DataFrame
+Columns: []
+Index: []
+2023-03-11 14:01:42 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:02:02 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:02:03 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/data/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 200 None
+2023-03-11 14:02:03 INFO     Successfully retrieved data from https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A
+2023-03-11 14:02:03 INFO     data fetched from ECB API: Index(['KEY', 'FREQ', 'CURRENCY', 'CURRENCY_DENOM', 'EXR_TYPE', 'EXR_SUFFIX',
+       'TIME_PERIOD', 'OBS_VALUE', 'OBS_STATUS', 'OBS_CONF', 'OBS_PRE_BREAK',
+       'OBS_COM', 'TIME_FORMAT', 'BREAKS', 'COLLECTION', 'COMPILING_ORG',
+       'DISS_ORG', 'DOM_SER_IDS', 'PUBL_ECB', 'PUBL_MU', 'PUBL_PUBLIC',
+       'UNIT_INDEX_BASE', 'COMPILATION', 'COVERAGE', 'DECIMALS', 'NAT_TITLE',
+       'SOURCE_AGENCY', 'SOURCE_PUB', 'TITLE', 'TITLE_COMPL', 'UNIT',
+       'UNIT_MULT'],
+      dtype='object')
+2023-03-11 14:02:03 INFO     EBC data after processing: Index(['time_period', 'currency', 'exr_eur'], dtype='object')
+2023-03-11 14:02:03 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:02:04 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/productssss HTTP/1.1" 404 94
+2023-03-11 14:02:04 ERROR    Request to https://api.escuelajs.co/api/v1/categories/4/productssss failed with status code 404
+2023-03-11 14:02:04 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:02:04 ERROR    An error occurred during data merge: 'currency'
+2023-03-11 14:02:04 INFO     
+EBC Exchange Rate data fetch sample: 
+  time_period currency  exr_eur
+0  2023-02-09      AUD   1.5409
+1  2023-02-10      AUD   1.5432
+2  2023-02-09      BGN   1.9558
+3  2023-02-10      BGN   1.9558
+4  2023-02-09      BRL   5.6165
+5  2023-02-10      BRL   5.6245
+2023-03-11 14:02:04 INFO     
+Final result data sample: 
+Empty DataFrame
+Columns: []
+Index: []
+2023-03-11 14:02:04 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:02:30 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:02:31 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/data/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 200 None
+2023-03-11 14:02:31 INFO     Successfully retrieved data from https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A
+2023-03-11 14:02:31 INFO     data fetched from ECB API: Index(['KEY', 'FREQ', 'CURRENCY', 'CURRENCY_DENOM', 'EXR_TYPE', 'EXR_SUFFIX',
+       'TIME_PERIOD', 'OBS_VALUE', 'OBS_STATUS', 'OBS_CONF', 'OBS_PRE_BREAK',
+       'OBS_COM', 'TIME_FORMAT', 'BREAKS', 'COLLECTION', 'COMPILING_ORG',
+       'DISS_ORG', 'DOM_SER_IDS', 'PUBL_ECB', 'PUBL_MU', 'PUBL_PUBLIC',
+       'UNIT_INDEX_BASE', 'COMPILATION', 'COVERAGE', 'DECIMALS', 'NAT_TITLE',
+       'SOURCE_AGENCY', 'SOURCE_PUB', 'TITLE', 'TITLE_COMPL', 'UNIT',
+       'UNIT_MULT'],
+      dtype='object')
+2023-03-11 14:02:31 INFO     EBC data after processing: Index(['time_period', 'currency', 'exr_eur'], dtype='object')
+2023-03-11 14:02:31 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:02:31 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/products HTTP/1.1" 200 14864
+2023-03-11 14:02:31 INFO     Successfully retrieved data from https://api.escuelajs.co/api/v1/categories/4/products
+2023-03-11 14:02:31 INFO     data fetched from Fake Ecommerce API: Index(['id', 'title', 'price', 'description', 'images', 'creationAt',
+       'updatedAt', 'category'],
+      dtype='object')
+2023-03-11 14:02:31 INFO     Fake ecommerce data after processing: Index(['title', 'price', 'currency'], dtype='object')
+2023-03-11 14:02:31 ERROR    An error occurred during data merge: 'currencyyy'
+2023-03-11 14:02:31 INFO     
+EBC Exchange Rate data fetch sample: 
+  time_period currency  exr_eur
+0  2023-02-09      AUD   1.5409
+1  2023-02-10      AUD   1.5432
+2  2023-02-09      BGN   1.9558
+3  2023-02-10      BGN   1.9558
+4  2023-02-09      BRL   5.6165
+5  2023-02-10      BRL   5.6245
+2023-03-11 14:02:31 INFO     
+Final result data sample: 
+Empty DataFrame
+Columns: []
+Index: []
+2023-03-11 14:02:31 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:03:54 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:03:55 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/data/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 200 None
+2023-03-11 14:03:55 INFO     Successfully retrieved data from https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A
+2023-03-11 14:03:55 INFO     data fetched from ECB API: Index(['KEY', 'FREQ', 'CURRENCY', 'CURRENCY_DENOM', 'EXR_TYPE', 'EXR_SUFFIX',
+       'TIME_PERIOD', 'OBS_VALUE', 'OBS_STATUS', 'OBS_CONF', 'OBS_PRE_BREAK',
+       'OBS_COM', 'TIME_FORMAT', 'BREAKS', 'COLLECTION', 'COMPILING_ORG',
+       'DISS_ORG', 'DOM_SER_IDS', 'PUBL_ECB', 'PUBL_MU', 'PUBL_PUBLIC',
+       'UNIT_INDEX_BASE', 'COMPILATION', 'COVERAGE', 'DECIMALS', 'NAT_TITLE',
+       'SOURCE_AGENCY', 'SOURCE_PUB', 'TITLE', 'TITLE_COMPL', 'UNIT',
+       'UNIT_MULT'],
+      dtype='object')
+2023-03-11 14:03:55 INFO     EBC data after processing: Index(['time_period', 'currency', 'exr_eur'], dtype='object')
+2023-03-11 14:03:55 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:03:55 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/products HTTP/1.1" 200 14864
+2023-03-11 14:03:56 INFO     Successfully retrieved data from https://api.escuelajs.co/api/v1/categories/4/products
+2023-03-11 14:03:56 INFO     data fetched from Fake Ecommerce API: Index(['id', 'title', 'price', 'description', 'images', 'creationAt',
+       'updatedAt', 'category'],
+      dtype='object')
+2023-03-11 14:03:56 INFO     Fake ecommerce data after processing: Index(['title', 'price', 'currency'], dtype='object')
+2023-03-11 14:03:56 INFO     Joined data : Index(['title', 'price', 'currency', 'time_period', 'exr_eur'], dtype='object')
+2023-03-11 14:03:56 INFO     Joined data after processing: Index(['product_name', 'price_US', 'price_EUR', 'date_exr'], dtype='object')
+2023-03-11 14:03:56 INFO     Joined data shape after processing: (48, 4)
+2023-03-11 14:03:56 INFO     
+EBC Exchange Rate data fetch sample: 
+  time_period currency  exr_eur
+0  2023-02-09      AUD   1.5409
+1  2023-02-10      AUD   1.5432
+2  2023-02-09      BGN   1.9558
+3  2023-02-10      BGN   1.9558
+4  2023-02-09      BRL   5.6165
+5  2023-02-10      BRL   5.6245
+2023-03-11 14:03:56 INFO     
+Final result data sample: 
+           product_name  price_US  price_EUR    date_exr
+0  Bespoke Bronze Shirt       808     750.16  2023-02-09
+1  Bespoke Bronze Shirt       808     755.85  2023-02-10
+2      asadsasdadasdasd       100      92.84  2023-02-09
+3      asadsasdadasdasd       100      93.55  2023-02-10
+4   Bespoke Steel Chair       256     237.68  2023-02-09
+5   Bespoke Steel Chair       256     239.48  2023-02-10
+2023-03-11 14:03:56 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:07:18 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:07:19 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/data/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 200 None
+2023-03-11 14:07:19 INFO     Successfully retrieved data from https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A
+2023-03-11 14:07:19 INFO     data fetched from ECB API: Index(['KEY', 'FREQ', 'CURRENCY', 'CURRENCY_DENOM', 'EXR_TYPE', 'EXR_SUFFIX',
+       'TIME_PERIOD', 'OBS_VALUE', 'OBS_STATUS', 'OBS_CONF', 'OBS_PRE_BREAK',
+       'OBS_COM', 'TIME_FORMAT', 'BREAKS', 'COLLECTION', 'COMPILING_ORG',
+       'DISS_ORG', 'DOM_SER_IDS', 'PUBL_ECB', 'PUBL_MU', 'PUBL_PUBLIC',
+       'UNIT_INDEX_BASE', 'COMPILATION', 'COVERAGE', 'DECIMALS', 'NAT_TITLE',
+       'SOURCE_AGENCY', 'SOURCE_PUB', 'TITLE', 'TITLE_COMPL', 'UNIT',
+       'UNIT_MULT'],
+      dtype='object')
+2023-03-11 14:07:19 INFO     EBC data after processing: Index(['time_period', 'currency', 'exr_eur'], dtype='object')
+2023-03-11 14:07:19 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:07:20 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/products HTTP/1.1" 200 14864
+2023-03-11 14:07:20 INFO     Successfully retrieved data from https://api.escuelajs.co/api/v1/categories/4/products
+2023-03-11 14:07:20 INFO     data fetched from Fake Ecommerce API: Index(['id', 'title', 'price', 'description', 'images', 'creationAt',
+       'updatedAt', 'category'],
+      dtype='object')
+2023-03-11 14:07:20 INFO     Fake ecommerce data after processing: Index(['title', 'price', 'currency'], dtype='object')
+2023-03-11 14:07:20 INFO     Joined data : Index(['title', 'price', 'currency', 'time_period', 'exr_eur'], dtype='object')
+2023-03-11 14:07:20 INFO     Joined data after processing: Index(['product_name', 'price_US', 'price_EUR', 'date_exr'], dtype='object')
+2023-03-11 14:07:20 INFO     Joined data shape after processing: (48, 4)
+2023-03-11 14:07:20 INFO     
+EBC Exchange Rate data fetch sample: 
+  time_period currency  exr_eur
+0  2023-02-09      AUD   1.5409
+1  2023-02-10      AUD   1.5432
+2  2023-02-09      BGN   1.9558
+3  2023-02-10      BGN   1.9558
+4  2023-02-09      BRL   5.6165
+5  2023-02-10      BRL   5.6245
+2023-03-11 14:07:20 INFO     
+Final result data sample: 
+           product_name  price_US  price_EUR    date_exr
+0  Bespoke Bronze Shirt       808     750.16  2023-02-09
+1  Bespoke Bronze Shirt       808     755.85  2023-02-10
+2      asadsasdadasdasd       100      92.84  2023-02-09
+3      asadsasdadasdasd       100      93.55  2023-02-10
+4   Bespoke Steel Chair       256     237.68  2023-02-09
+5   Bespoke Steel Chair       256     239.48  2023-02-10
+2023-03-11 14:07:20 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:07:54 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:07:55 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/data/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 200 None
+2023-03-11 14:07:55 INFO     Successfully retrieved data from https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A
+2023-03-11 14:07:55 INFO     data fetched from ECB API: Index(['KEY', 'FREQ', 'CURRENCY', 'CURRENCY_DENOM', 'EXR_TYPE', 'EXR_SUFFIX',
+       'TIME_PERIOD', 'OBS_VALUE', 'OBS_STATUS', 'OBS_CONF', 'OBS_PRE_BREAK',
+       'OBS_COM', 'TIME_FORMAT', 'BREAKS', 'COLLECTION', 'COMPILING_ORG',
+       'DISS_ORG', 'DOM_SER_IDS', 'PUBL_ECB', 'PUBL_MU', 'PUBL_PUBLIC',
+       'UNIT_INDEX_BASE', 'COMPILATION', 'COVERAGE', 'DECIMALS', 'NAT_TITLE',
+       'SOURCE_AGENCY', 'SOURCE_PUB', 'TITLE', 'TITLE_COMPL', 'UNIT',
+       'UNIT_MULT'],
+      dtype='object')
+2023-03-11 14:07:55 INFO     EBC data after processing: Index(['time_period', 'currency', 'exr_eur'], dtype='object')
+2023-03-11 14:07:55 ERROR    An error occurred during csv file writing: Cannot save file into a non-existent directory: 'output\sadasd'
+2023-03-11 14:07:55 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:07:55 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/products HTTP/1.1" 200 14864
+2023-03-11 14:07:55 INFO     Successfully retrieved data from https://api.escuelajs.co/api/v1/categories/4/products
+2023-03-11 14:07:55 INFO     data fetched from Fake Ecommerce API: Index(['id', 'title', 'price', 'description', 'images', 'creationAt',
+       'updatedAt', 'category'],
+      dtype='object')
+2023-03-11 14:07:55 INFO     Fake ecommerce data after processing: Index(['title', 'price', 'currency'], dtype='object')
+2023-03-11 14:07:55 INFO     Joined data : Index(['title', 'price', 'currency', 'time_period', 'exr_eur'], dtype='object')
+2023-03-11 14:07:55 INFO     Joined data after processing: Index(['product_name', 'price_US', 'price_EUR', 'date_exr'], dtype='object')
+2023-03-11 14:07:55 INFO     Joined data shape after processing: (48, 4)
+2023-03-11 14:07:55 ERROR    An error occurred during csv file writing: Cannot save file into a non-existent directory: 'output\sadasd'
+2023-03-11 14:07:55 INFO     
+EBC Exchange Rate data fetch sample: 
+  time_period currency  exr_eur
+0  2023-02-09      AUD   1.5409
+1  2023-02-10      AUD   1.5432
+2  2023-02-09      BGN   1.9558
+3  2023-02-10      BGN   1.9558
+4  2023-02-09      BRL   5.6165
+5  2023-02-10      BRL   5.6245
+2023-03-11 14:07:55 INFO     
+Final result data sample: 
+           product_name  price_US  price_EUR    date_exr
+0  Bespoke Bronze Shirt       808     750.16  2023-02-09
+1  Bespoke Bronze Shirt       808     755.85  2023-02-10
+2      asadsasdadasdasd       100      92.84  2023-02-09
+3      asadsasdadasdasd       100      93.55  2023-02-10
+4   Bespoke Steel Chair       256     237.68  2023-02-09
+5   Bespoke Steel Chair       256     239.48  2023-02-10
+2023-03-11 14:07:55 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:08:46 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:08:47 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/data/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 200 None
+2023-03-11 14:08:47 INFO     Successfully retrieved data from https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A
+2023-03-11 14:08:47 INFO     data fetched from ECB API: Index(['KEY', 'FREQ', 'CURRENCY', 'CURRENCY_DENOM', 'EXR_TYPE', 'EXR_SUFFIX',
+       'TIME_PERIOD', 'OBS_VALUE', 'OBS_STATUS', 'OBS_CONF', 'OBS_PRE_BREAK',
+       'OBS_COM', 'TIME_FORMAT', 'BREAKS', 'COLLECTION', 'COMPILING_ORG',
+       'DISS_ORG', 'DOM_SER_IDS', 'PUBL_ECB', 'PUBL_MU', 'PUBL_PUBLIC',
+       'UNIT_INDEX_BASE', 'COMPILATION', 'COVERAGE', 'DECIMALS', 'NAT_TITLE',
+       'SOURCE_AGENCY', 'SOURCE_PUB', 'TITLE', 'TITLE_COMPL', 'UNIT',
+       'UNIT_MULT'],
+      dtype='object')
+2023-03-11 14:08:47 INFO     EBC data after processing: Index(['time_period', 'currency', 'exr_eur'], dtype='object')
+2023-03-11 14:08:47 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:08:48 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/products HTTP/1.1" 200 14864
+2023-03-11 14:08:48 INFO     Successfully retrieved data from https://api.escuelajs.co/api/v1/categories/4/products
+2023-03-11 14:08:48 INFO     data fetched from Fake Ecommerce API: Index(['id', 'title', 'price', 'description', 'images', 'creationAt',
+       'updatedAt', 'category'],
+      dtype='object')
+2023-03-11 14:08:48 INFO     Fake ecommerce data after processing: Index(['title', 'price', 'currency'], dtype='object')
+2023-03-11 14:08:48 INFO     Joined data : Index(['title', 'price', 'currency', 'time_period', 'exr_eur'], dtype='object')
+2023-03-11 14:08:48 INFO     Joined data after processing: Index(['product_name', 'price_US', 'price_EUR', 'date_exr'], dtype='object')
+2023-03-11 14:08:48 INFO     Joined data shape after processing: (48, 4)
+2023-03-11 14:08:48 INFO     
+EBC Exchange Rate data fetch sample: 
+  time_period currency  exr_eur
+0  2023-02-09      AUD   1.5409
+1  2023-02-10      AUD   1.5432
+2  2023-02-09      BGN   1.9558
+3  2023-02-10      BGN   1.9558
+4  2023-02-09      BRL   5.6165
+5  2023-02-10      BRL   5.6245
+2023-03-11 14:08:48 INFO     
+Final result data sample: 
+           product_name  price_US  price_EUR    date_exr
+0  Bespoke Bronze Shirt       808     750.16  2023-02-09
+1  Bespoke Bronze Shirt       808     755.85  2023-02-10
+2      asadsasdadasdasd       100      92.84  2023-02-09
+3      asadsasdadasdasd       100      93.55  2023-02-10
+4   Bespoke Steel Chair       256     237.68  2023-02-09
+5   Bespoke Steel Chair       256     239.48  2023-02-10
+2023-03-11 14:08:48 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:16:16 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:16:17 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/data/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 200 None
+2023-03-11 14:16:17 INFO     Successfully retrieved data from https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A
+2023-03-11 14:16:17 INFO     data fetched from ECB API: Index(['KEY', 'FREQ', 'CURRENCY', 'CURRENCY_DENOM', 'EXR_TYPE', 'EXR_SUFFIX',
+       'TIME_PERIOD', 'OBS_VALUE', 'OBS_STATUS', 'OBS_CONF', 'OBS_PRE_BREAK',
+       'OBS_COM', 'TIME_FORMAT', 'BREAKS', 'COLLECTION', 'COMPILING_ORG',
+       'DISS_ORG', 'DOM_SER_IDS', 'PUBL_ECB', 'PUBL_MU', 'PUBL_PUBLIC',
+       'UNIT_INDEX_BASE', 'COMPILATION', 'COVERAGE', 'DECIMALS', 'NAT_TITLE',
+       'SOURCE_AGENCY', 'SOURCE_PUB', 'TITLE', 'TITLE_COMPL', 'UNIT',
+       'UNIT_MULT'],
+      dtype='object')
+2023-03-11 14:16:17 INFO     EBC data after processing: Index(['time_period', 'currency', 'exr_eur'], dtype='object')
+2023-03-11 14:16:17 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:16:17 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/products HTTP/1.1" 200 14240
+2023-03-11 14:16:17 INFO     Successfully retrieved data from https://api.escuelajs.co/api/v1/categories/4/products
+2023-03-11 14:16:17 INFO     data fetched from Fake Ecommerce API: Index(['id', 'title', 'price', 'description', 'images', 'creationAt',
+       'updatedAt', 'category'],
+      dtype='object')
+2023-03-11 14:16:17 INFO     Fake ecommerce data after processing: Index(['title', 'price', 'currency'], dtype='object')
+2023-03-11 14:16:17 INFO     Joined data : Index(['title', 'price', 'currency', 'time_period', 'exr_eur'], dtype='object')
+2023-03-11 14:16:17 INFO     Joined data after processing: Index(['product_name', 'price_US', 'price_EUR', 'date_exr'], dtype='object')
+2023-03-11 14:16:17 INFO     Joined data shape after processing: (46, 4)
+2023-03-11 14:16:17 INFO     
+EBC Exchange Rate data fetch sample: 
+  time_period currency  exr_eur
+0  2023-02-09      AUD   1.5409
+1  2023-02-10      AUD   1.5432
+2  2023-02-09      BGN   1.9558
+3  2023-02-10      BGN   1.9558
+4  2023-02-09      BRL   5.6165
+5  2023-02-10      BRL   5.6245
+2023-03-11 14:16:17 INFO     
+Final result data sample: 
+           product_name  price_US  price_EUR    date_exr
+0      asadsasdadasdasd       100      92.84  2023-02-09
+1      asadsasdadasdasd       100      93.55  2023-02-10
+2   Bespoke Steel Chair       256     237.68  2023-02-09
+3   Bespoke Steel Chair       256     239.48  2023-02-10
+4  Practical Cotton Car        54      50.13  2023-02-09
+5  Practical Cotton Car        54      50.51  2023-02-10
+2023-03-11 14:16:17 INFO     
+--------------------------------------------------------------------------
+2023-03-11 14:25:47 DEBUG    Starting new HTTPS connection (1): sdw-wsrest.ecb.europa.eu:443
+2023-03-11 14:25:48 DEBUG    https://sdw-wsrest.ecb.europa.eu:443 "GET /service/data/EXR/D..EUR.SP00.A?startPeriod=2023-02-09&endPeriod=2023-02-10 HTTP/1.1" 200 None
+2023-03-11 14:25:48 INFO     Successfully retrieved data from https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A
+2023-03-11 14:25:48 INFO     data fetched from ECB API: Index(['KEY', 'FREQ', 'CURRENCY', 'CURRENCY_DENOM', 'EXR_TYPE', 'EXR_SUFFIX',
+       'TIME_PERIOD', 'OBS_VALUE', 'OBS_STATUS', 'OBS_CONF', 'OBS_PRE_BREAK',
+       'OBS_COM', 'TIME_FORMAT', 'BREAKS', 'COLLECTION', 'COMPILING_ORG',
+       'DISS_ORG', 'DOM_SER_IDS', 'PUBL_ECB', 'PUBL_MU', 'PUBL_PUBLIC',
+       'UNIT_INDEX_BASE', 'COMPILATION', 'COVERAGE', 'DECIMALS', 'NAT_TITLE',
+       'SOURCE_AGENCY', 'SOURCE_PUB', 'TITLE', 'TITLE_COMPL', 'UNIT',
+       'UNIT_MULT'],
+      dtype='object')
+2023-03-11 14:25:48 INFO     EBC data after processing: Index(['time_period', 'currency', 'exr_eur'], dtype='object')
+2023-03-11 14:25:48 DEBUG    Starting new HTTPS connection (1): api.escuelajs.co:443
+2023-03-11 14:25:49 DEBUG    https://api.escuelajs.co:443 "GET /api/v1/categories/4/products HTTP/1.1" 200 12399
+2023-03-11 14:25:49 INFO     Successfully retrieved data from https://api.escuelajs.co/api/v1/categories/4/products
+2023-03-11 14:25:49 INFO     data fetched from Fake Ecommerce API: Index(['id', 'title', 'price', 'description', 'images', 'creationAt',
+       'updatedAt', 'category'],
+      dtype='object')
+2023-03-11 14:25:49 INFO     Fake ecommerce data after processing: Index(['title', 'price', 'currency'], dtype='object')
+2023-03-11 14:25:49 INFO     Joined data : Index(['title', 'price', 'currency', 'time_period', 'exr_eur'], dtype='object')
+2023-03-11 14:25:49 INFO     Joined data after processing: Index(['product_name', 'price_US', 'price_EUR', 'date_exr'], dtype='object')
+2023-03-11 14:25:49 INFO     Joined data shape after processing: (40, 4)
+2023-03-11 14:25:49 INFO     
+EBC Exchange Rate data fetch sample: 
+  time_period currency  exr_eur
+0  2023-02-09      AUD   1.5409
+1  2023-02-10      AUD   1.5432
+2  2023-02-09      BGN   1.9558
+3  2023-02-10      BGN   1.9558
+4  2023-02-09      BRL   5.6165
+5  2023-02-10      BRL   5.6245
+2023-03-11 14:25:49 INFO     
+Final result data sample: 
+               product_name  price_US  price_EUR    date_exr
+0   Bespoke Rubber Keyboard       127     117.91  2023-02-09
+1   Bespoke Rubber Keyboard       127     118.80  2023-02-10
+2    Handmade Granite Salad       570     529.20  2023-02-09
+3    Handmade Granite Salad       570     533.21  2023-02-10
+4  Incredible Wooden Towels       740     687.03  2023-02-09
+5  Incredible Wooden Towels       740     692.24  2023-02-10
+2023-03-11 14:25:49 INFO     
+--------------------------------------------------------------------------
