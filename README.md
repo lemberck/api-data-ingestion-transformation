@@ -1,5 +1,5 @@
 # api-data-ingestion-transformation
-Fetching data from two different APIs , transforming and joining them for bulding a Business report
+Fetching data from two different APIs , transforming and joining them in order to build a Business report as requested.
 
 ## About the code
 
